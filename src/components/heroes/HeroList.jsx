@@ -1,15 +1,18 @@
 import React from 'react';
 import { getHeroByIdPublisher } from '../../selectors/getHeroByIdPublisher';
+import HeroCard from './HeroCard';
 
 const HeroList = ({ publisher }) => {
 	const heroes = getHeroByIdPublisher(publisher);
-	console.log(heroes);
+
 	return (
-		<ul>
+		<div className="row row-cols-1 row-cols-md-3 g-4">
 			{heroes.map((hero) => (
-				<li key={hero.id}>{hero.superhero}</li>
+				// colocando "..." significa que al enviar el objeto
+				// desestructure todas las propiedades
+				<HeroCard key={hero.id} {...hero} />
 			))}
-		</ul>
+		</div>
 	);
 };
 
