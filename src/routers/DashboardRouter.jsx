@@ -17,7 +17,7 @@ const DashboardRouter = () => {
 					<Route exact path="/dc" component={DcScreen} />
 					{/* para pasar argumentos por url se hace mediante
                     los ":" y sucesivamente el argumento */}
-					<Route exact path="/heroe:heroeId" component={HeroScreen} />
+					<Route exact path="/hero/:heroeId" component={HeroScreen} />
 
 					{/* Redirect es el default del switch */}
 					<Redirect to="/marvel" />

@@ -13,6 +13,7 @@ const HeroCard = ({
 	first_appearance,
 	characters,
 }) => {
+	console.log(id);
 	return (
 		// la etiqueta Link funciona de manera similar que "a"
 		// la propiedad to===href
