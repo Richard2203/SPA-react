@@ -9,7 +9,7 @@ const DashboardRouter = () => {
 	return (
 		<>
 			<Navbar />
-			<div>
+			<div className="container mt-3">
 				{/* el componente de rutas hijo no contiene la etiqueta Router */}
 				<Switch>
 					<Route exact path="/marvel" component={MarvelScreen} />
