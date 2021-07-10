@@ -5,6 +5,7 @@ import { Navbar } from '../components/ui/Navbar';
 import MarvelScreen from '../components/marvel/MarvelScreen';
 import DcScreen from '../components/dc/DcScreen';
 import HeroScreen from '../components/heroes/HeroScreen';
+import SearchScreen from '../components/search/SearchScreen';
 
 const DashboardRouter = () => {
 	return (
@@ -18,6 +19,7 @@ const DashboardRouter = () => {
 					{/* para pasar argumentos por url se hace mediante
                     los ":" y sucesivamente el argumento */}
 					<Route exact path="/hero/:heroeId" component={HeroScreen} />
+					<Route exact path="/search" component={SearchScreen} />
 
 					{/* Redirect es el default del switch */}
 					<Redirect to="/marvel" />
