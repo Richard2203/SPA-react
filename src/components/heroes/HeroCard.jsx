@@ -16,7 +16,10 @@ const HeroCard = ({
 	return (
 		// la etiqueta Link funciona de manera similar que "a"
 		// la propiedad to===href
-		<Link to={`./hero/${id}`} className="my-card">
+		<Link
+			to={`./hero/${id}`}
+			className="my-card animate__animated animate__flipInX"
+		>
 			{/* implemetando template literals es posible hacer la insercion
             de las imagenes de manera dinamica */}
 			<img

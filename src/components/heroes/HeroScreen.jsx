@@ -30,13 +30,13 @@ const HeroScreen = () => {
 			<h1>Hero Screen</h1>
 			<hr />
 			<div className="row">
-				<div className="col-md-4">
+				<div className="col-md-4 animate__animated animate__fadeInLeft">
 					<img
 						src={`@/assets/heroes/${heroeId}.jpg`}
 						alt={`${superhero}`}
 					/>
 				</div>
-				<div className="col-md-8">
+				<div className="col-md-8 animate__animated animate__fadeInLeft">
 					<button
 						className="btn btn-outline-warning"
 						onClick={handleReturn}
