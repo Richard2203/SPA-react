@@ -1,5 +1,5 @@
-import React from 'react';
-import { useParams, Redirect } from 'react-router-dom';
+import React, { useMemo } from 'react';
+import { useParams, Redirect, useHistory } from 'react-router-dom';
 import { getHeroById } from '../../selectors/getHeroById';
 
 const HeroScreen = () => {
@@ -7,7 +7,11 @@ const HeroScreen = () => {
 	// e incluso es posible desestructurarlos
 	const { heroeId } = useParams();
 
-	const hero = getHeroById(heroeId);
+	const history = useHistory();
+
+	// empleando useMemo para disparar el metodo de busqueda del heroe
+	// unicamente cuando el heroeId cambia
+	const hero = useMemo(() => getHeroById(heroeId), [heroeId]);
 
 	// Redirect('<path:string>')
 	// redirige a la ruta indica. Se implemento para que en caso de no existir
@@ -17,10 +21,30 @@ const HeroScreen = () => {
 	const { superhero, publisher, alter_ego, first_appearance, characters } =
 		hero;
 
+	const handleReturn = () => {
+		history.length <= 2 ? history.push('./') : history.goBack();
+	};
+
 	return (
 		<div>
 			<h1>Hero Screen</h1>
 			<hr />
+			<div className="row">
+				<div className="col-md-4">
+					<img
+						src={`@/assets/heroes/${heroeId}.jpg`}
+						alt={`${superhero}`}
+					/>
+				</div>
+				<div className="col-md-8">
+					<button
+						className="btn btn-outline-warning"
+						onClick={handleReturn}
+					>
+						Return
+					</button>
+				</div>
+			</div>
 		</div>
 	);
 };
