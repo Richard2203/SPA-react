@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Switch, Route, Redirect } from 'react-router-dom';
+// las rutas hijas/secundarias se manejan con Switch y no con BrowserRouter
+import { Switch, Route, Redirect } from 'react-router-dom';
 import { Navbar } from '../components/ui/Navbar';
 import MarvelScreen from '../components/marvel/MarvelScreen';
 import DcScreen from '../components/dc/DcScreen';
@@ -13,10 +14,10 @@ const DashboardRouter = () => {
 				{/* el componente de rutas hijo no contiene la etiqueta Router */}
 				<Switch>
 					<Route exact path="/marvel" component={MarvelScreen} />
+					<Route exact path="/dc" component={DcScreen} />
 					{/* para pasar argumentos por url se hace mediante
                     los ":" y sucesivamente el argumento */}
 					<Route exact path="/heroe:heroeId" component={HeroScreen} />
-					<Route exact path="/dc" component={DcScreen} />
 
 					{/* Redirect es el default del switch */}
 					<Redirect to="/marvel" />

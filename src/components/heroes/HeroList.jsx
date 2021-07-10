@@ -3,10 +3,11 @@ import { getHeroByIdPublisher } from '../../selectors/getHeroByIdPublisher';
 
 const HeroList = ({ publisher }) => {
 	const heroes = getHeroByIdPublisher(publisher);
+	console.log(heroes);
 	return (
 		<ul>
 			{heroes.map((hero) => (
-				<li key={hero}>{hero.superhero}</li>
+				<li key={hero.id}>{hero.superhero}</li>
 			))}
 		</ul>
 	);

@@ -16,7 +16,7 @@ export const Navbar = () => {
 						exact
 						to="/marvel"
 					>
-						Marvel
+						Marvel Comics
 					</NavLink>
 
 					<NavLink
@@ -25,7 +25,7 @@ export const Navbar = () => {
 						exact
 						to="/dc"
 					>
-						DC
+						DC Comics
 					</NavLink>
 				</div>
 			</div>

@@ -1,4 +1,5 @@
 import React from 'react';
+// Las rutas padres/principales se manejan con BrowserRouter
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import LoginScreen from '../components/login/LoginScreen';
@@ -13,12 +14,8 @@ const AppRouter = () => {
 			globales que apareceran en todos los componentes*/}
 			<div>
 				<Switch>
-					<Route exact path="/login">
-						<LoginScreen />
-					</Route>
-					<Route path="/">
-						<DashboardRouter />
-					</Route>
+					<Route exact path="/login" component={LoginScreen} />
+					<Route path="/" component={DashboardRouter} />
 				</Switch>
 			</div>
 		</Router>
