@@ -7,6 +7,10 @@ const HeroScreen = () => {
 	// e incluso es posible desestructurarlos
 	const { heroeId } = useParams();
 
+	// el hook useHistory nos da acceso a la instancia "historial" que puede
+	// usarse para navegar de diversas formas entre componentes/pestanias.
+	// es posible hacer uso del hook useHistory puesto que este componente
+	// esta envuelto en un componente de orden superior (componente Router)
 	const history = useHistory();
 
 	// empleando useMemo para disparar el metodo de busqueda del heroe

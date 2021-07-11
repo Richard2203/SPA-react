@@ -5,7 +5,9 @@ import { types } from '../../types/types';
 
 const LoginScreen = () => {
 	// el hook useHistory nos da acceso a la instancia "historial" que puede
-	// usarse para navegar de diversas formas entre componentes/pestanias
+	// usarse para navegar de diversas formas entre componentes/pestanias.
+	// es posible hacer uso del hook useHistory puesto que este componente
+	// esta envuelto en un componente de orden superior (componente Router)
 	let history = useHistory();
 	const { dispatch } = useContext(AuthContext);
 

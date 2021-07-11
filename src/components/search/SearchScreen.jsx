@@ -10,6 +10,11 @@ import { getHeroByName } from '../../selectors/getHeroByName';
 
 const SearchScreen = () => {
 	const location = useLocation();
+
+	// el hook useHistory nos da acceso a la instancia "historial" que puede
+	// usarse para navegar de diversas formas entre componentes/pestanias.
+	// es posible hacer uso del hook useHistory puesto que este componente
+	// esta envuelto en un componente de orden superior (componente Router)
 	const history = useHistory();
 
 	// .parse(<string>) nos permite convertir una cadena url (la seccion de
