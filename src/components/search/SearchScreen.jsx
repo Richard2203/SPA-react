@@ -1,23 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { heroes } from '../../data/heroes';
+import { useForm } from '../../hooks/useForm';
 import HeroCard from '../heroes/HeroCard';
 
 const SearchScreen = () => {
-	const [Search, setSearch] = useState('');
+	const [Values, handleInputChange, reset] = useForm({
+		searchInput: 'find your hero',
+	});
+
+	const { searchInput } = Values;
+
 	const heroesFiltered = heroes;
 
 	const handleSearch = (e) => {
 		e.preventDefault();
-		console.log(Search);
+		console.log(searchInput);
 		reset();
-	};
-
-	const handleInputChange = ({ target }) => {
-		setSearch(target.value);
-	};
-
-	const reset = () => {
-		setSearch('');
 	};
 
 	return (
@@ -29,11 +27,10 @@ const SearchScreen = () => {
 					<input
 						type="text"
 						className="form-control mb-2"
-						placeholder="find your hero"
-						name="search"
+						name="searchInput"
 						autoComplete="off"
 						onChange={handleInputChange}
-						value={Search}
+						value={searchInput}
 					/>
 					<button className="btn btn-outline-primary" type="submit">
 						Search
