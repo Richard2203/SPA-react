@@ -12,19 +12,31 @@ const LoginScreen = () => {
 	const { dispatch } = useContext(AuthContext);
 
 	const handleLogin = () => {
+		// busca en localStorage la existencia del ultimo path visitado
+		// si no existe entonces retorna '/'; esto para enviar al usuario
+		// a su ultima pagina visitada al momento de dar login
+		const path = localStorage.getItem('lastPath') || '/';
+
 		// .push(<ruta:string>) redirige hacia la ruta indicada en el argumento
 		// history.push('/');
 
 		// .replace('/') redirige hacia la ruta indicada PERO sin guardar en
 		// history esa redireccion por lo cual al intentar regresar se queda
 		// en el mismo lugar
-		console.log(types.login);
+
 		const action = {
 			type: types.login,
 			payload: { name: 'paquito' },
 		};
+
+		// colocando primero o el dispatch o primero el history se obtiene
+		// el mismo resultado y es porque React ejecuta primero todo lo
+		// sincrono y dispatch es de naturaleza sincrona por lo cual
+		// no importa su orden se ejecutara primero que history
 		dispatch(action);
-		history.replace('/');
+
+		// histroy es asincrono puesto que trabaja con navegaciones
+		history.replace(path);
 	};
 
 	return (
