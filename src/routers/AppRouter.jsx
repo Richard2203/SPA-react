@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 // Las rutas padres/principales se manejan con BrowserRouter
-import { BrowserRouter as Router, Switch } from 'react-router-dom';
+import { HashRouter as Router, Switch } from 'react-router-dom';
 
 import PrivateRoute from '../auth/PrivateRoute';
 import PublicRoute from '../auth/PublicRoute';
