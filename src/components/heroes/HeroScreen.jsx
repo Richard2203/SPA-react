@@ -17,10 +17,11 @@ const HeroScreen = () => {
 	// unicamente cuando el heroeId cambia
 	const hero = useMemo(() => getHeroById(heroeId), [heroeId]);
 
-	// Redirect('<path:string>')
+	// Redirect('<path:string>') o <Redirect to='path:string'/>
 	// redirige a la ruta indica. Se implemento para que en caso de no existir
-	// el hero no renderice el componente y de algun error
-	if (!hero) return Redirect('./');
+	// el hero no renderice el componente con informacion y en su lugar
+	// renderice Redirect como un componente
+	if (!hero) return <Redirect to="./" />;
 
 	const { superhero, publisher, alter_ego, first_appearance, characters } =
 		hero;
