@@ -1,0 +1,294 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests SearchScreen component Should call submit and return a superman card and set input with superman 1`] = `
+<div
+  className="row mt-5"
+>
+  <div
+    className="col-md-4"
+  >
+    <h4>
+      Search Hero
+    </h4>
+    <hr />
+    <form
+      onSubmit={[Function]}
+    >
+      <input
+        autoComplete="off"
+        className="form-control mb-2"
+        name="searchInput"
+        onChange={[Function]}
+        placeholder="find your hero"
+        type="text"
+        value="superman"
+      />
+      <button
+        className="btn btn-outline-primary"
+        type="submit"
+      >
+        Search
+      </button>
+    </form>
+  </div>
+  <div
+    className="col-md-8"
+  >
+    <h4>
+      Results
+    </h4>
+    <hr />
+    <div
+      className="alert alert-danger"
+    >
+      <p
+        className=""
+      >
+        No existe el heroe
+      </p>
+    </div>
+    <a
+      className="my-card animate__animated animate__flipInX"
+      onClick={[Function]}
+    >
+      <img
+        alt="Superman"
+        className="img img-responsive"
+        src="./assets/heroes/dc-superman.jpg"
+      />
+      <div
+        className="profile-name"
+      >
+        Superman
+      </div>
+      <div
+        className="profile-position"
+      >
+        Kal-El
+      </div>
+      <div
+        className="profile-overview"
+      >
+        <div
+          className="profile-overview"
+        >
+          <div
+            className="row"
+          >
+            <div
+              className="col-ms-4"
+            >
+              <h3>
+                DC Comics
+              </h3>
+              <p>
+                Primera aparición: 
+                <br />
+                Action Comics #1
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Tests SearchScreen component Should call submit and show error if hero not found 1`] = `
+<div
+  className="row mt-5"
+>
+  <div
+    className="col-md-4"
+  >
+    <h4>
+      Search Hero
+    </h4>
+    <hr />
+    <form
+      onSubmit={[Function]}
+    >
+      <input
+        autoComplete="off"
+        className="form-control mb-2"
+        name="searchInput"
+        onChange={[Function]}
+        placeholder="find your hero"
+        type="text"
+        value="anything"
+      />
+      <button
+        className="btn btn-outline-primary"
+        type="submit"
+      >
+        Search
+      </button>
+    </form>
+  </div>
+  <div
+    className="col-md-8"
+  >
+    <h4>
+      Results
+    </h4>
+    <hr />
+    <div
+      className="alert alert-danger"
+    >
+      <p
+        className=""
+      >
+        No existe el heroe
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tests SearchScreen component Should display correctly 1`] = `
+<div
+  className="row mt-5"
+>
+  <div
+    className="col-md-4"
+  >
+    <h4>
+      Search Hero
+    </h4>
+    <hr />
+    <form
+      onSubmit={[Function]}
+    >
+      <input
+        autoComplete="off"
+        className="form-control mb-2"
+        name="searchInput"
+        onChange={[Function]}
+        placeholder="find your hero"
+        type="text"
+        value="hero"
+      />
+      <button
+        className="btn btn-outline-primary"
+        type="submit"
+      >
+        Search
+      </button>
+    </form>
+  </div>
+  <div
+    className="col-md-8"
+  >
+    <h4>
+      Results
+    </h4>
+    <hr />
+    <div
+      className="alert alert-danger"
+    >
+      <p
+        className=""
+      >
+        No existe el heroe
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Tests SearchScreen component Should return a batman card and set input with batman 1`] = `
+<div
+  className="row mt-5"
+>
+  <div
+    className="col-md-4"
+  >
+    <h4>
+      Search Hero
+    </h4>
+    <hr />
+    <form
+      onSubmit={[Function]}
+    >
+      <input
+        autoComplete="off"
+        className="form-control mb-2"
+        name="searchInput"
+        onChange={[Function]}
+        placeholder="find your hero"
+        type="text"
+        value="batman"
+      />
+      <button
+        className="btn btn-outline-primary"
+        type="submit"
+      >
+        Search
+      </button>
+    </form>
+  </div>
+  <div
+    className="col-md-8"
+  >
+    <h4>
+      Results
+    </h4>
+    <hr />
+    <div
+      className="alert alert-danger"
+    >
+      <p
+        className=""
+      >
+        No existe el heroe
+      </p>
+    </div>
+    <a
+      className="my-card animate__animated animate__flipInX"
+      href="/hero/dc-batman"
+      onClick={[Function]}
+    >
+      <img
+        alt="Batman"
+        className="img img-responsive"
+        src="./assets/heroes/dc-batman.jpg"
+      />
+      <div
+        className="profile-name"
+      >
+        Batman
+      </div>
+      <div
+        className="profile-position"
+      >
+        Bruce Wayne
+      </div>
+      <div
+        className="profile-overview"
+      >
+        <div
+          className="profile-overview"
+        >
+          <div
+            className="row"
+          >
+            <div
+              className="col-ms-4"
+            >
+              <h3>
+                DC Comics
+              </h3>
+              <p>
+                Primera aparición: 
+                <br />
+                Detective Comics #27
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+`;
