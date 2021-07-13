@@ -64,7 +64,7 @@ const SearchScreen = () => {
 					</div>
 				)}
 
-				{heroesFiltered.length === 0 && q !== '' && (
+				{heroesFiltered && q !== '' && (
 					<div className="alert alert-danger">
 						<p className="">No existe el heroe</p>
 					</div>
